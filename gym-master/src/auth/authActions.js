@@ -21,7 +21,7 @@ export const logout = () => {
 
 export const login = (username, password) => async (dispatch) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/login', {
+        const response = await axios.post('https://gym-project-backend-1j8o.onrender.com/api/auth/login', {
             username,
             password,
         });
