@@ -18,7 +18,7 @@ function ConsultForum() {
 
     const fetchPosts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/post/getPosts', {
+            const response = await axios.get('https://gym-project-backend-1j8o.onrender.com/api/post/getPosts', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function ConsultForum() {
         const photos = {};
         for (const userId of userIds) {
             try {
-                const response = await axios.get(`http://localhost:5000/api/auth/getUserById/${userId}`, {
+                const response = await axios.get(`https://gym-project-backend-1j8o.onrender.com/api/auth/getUserById/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function ConsultForum() {
     const handleDeletePost = async () => {
         console.log(postToDelete._id)
         try {
-            const response = await axios.delete(`http://localhost:5000/api/post/deletePost/${postToDelete._id}`, {
+            const response = await axios.delete(`https://gym-project-backend-1j8o.onrender.com/api/post/deletePost/${postToDelete._id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }
