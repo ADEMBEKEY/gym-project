@@ -15,7 +15,7 @@ function StaffList() {
 
     const fetchStaffUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/getStaff', {
+            const response = await axios.get('https://gym-project-backend-1j8o.onrender.com/api/auth/getStaff', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
@@ -31,7 +31,7 @@ function StaffList() {
         if (!confirmDelete) return; // If user cancels, exit function
 
         try {
-            await axios.delete(`http://localhost:5000/api/auth/${userId}`, {
+            await axios.delete(`https://gym-project-backend-1j8o.onrender.com/api/auth/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
