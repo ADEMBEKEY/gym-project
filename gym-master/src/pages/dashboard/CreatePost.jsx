@@ -21,7 +21,7 @@ function CreatePost() {
     const fetchUsers = async () => {
         setLoadingUsers(true); // Set loading to true when fetching users
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/getClient', {
+            const response = await axios.get('https://gym-project-backend-1j8o.onrender.com/api/auth/getClient', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -45,7 +45,7 @@ function CreatePost() {
                 targetUsers: type === 'Targeted' ? targetUsers : [],
             };
             console.log(postData);
-            await axios.post('http://localhost:5000/api/post/createPost', postData, {
+            await axios.post('https://gym-project-backend-1j8o.onrender.com/api/post/createPost', postData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json',
