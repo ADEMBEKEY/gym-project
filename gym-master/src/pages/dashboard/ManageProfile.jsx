@@ -18,7 +18,7 @@ function ManageProfile() {
     useEffect(() => {
         const fetchPersonalInfo = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/auth/getPersonalInfo', {
+                const response = await axios.get('https://gym-project-backend-1j8o.onrender.com/api/auth/getPersonalInfo', {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                     },
@@ -44,7 +44,7 @@ function ManageProfile() {
         e.preventDefault();
 
         try {
-            const response = await axios.put('http://localhost:5000/api/auth/editPersonalInfo', userInfo, {
+            const response = await axios.put('https://gym-project-backend-1j8o.onrender.com/api/auth/editPersonalInfo', userInfo, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
