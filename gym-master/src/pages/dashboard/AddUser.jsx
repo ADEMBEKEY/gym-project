@@ -60,7 +60,7 @@ function AddUser({ isOwner }) {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/addUser', userData, {
+            const response = await axios.post('https://gym-project-backend-1j8o.onrender.com/api/auth/addUser', userData, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
