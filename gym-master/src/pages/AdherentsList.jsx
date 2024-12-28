@@ -31,7 +31,7 @@ function AdherentsList() {
 
     const fetchStaffUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/getClient', {
+            const response = await axios.get('https://gym-project-backend-1j8o.onrender.com/api/auth/getClient', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
@@ -48,7 +48,7 @@ function AdherentsList() {
         if (!confirmDelete) return;
 
         try {
-            await axios.delete(`http://localhost:5000/api/auth/${userId}`, {
+            await axios.delete(`https://gym-project-backend-1j8o.onrender.com/api/auth/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },
