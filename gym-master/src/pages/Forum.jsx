@@ -55,7 +55,7 @@ function Forum() {
 
     const fetchPosts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/post/getPosts', {
+            const response = await axios.get('https://gym-project-backend-1j8o.onrender.com/api/post/getPosts', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json',
